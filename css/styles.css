@@ -5,6 +5,7 @@
     --primary-color: #757575;
     --font: black;
     --primary-theme-dark: #2f303a;
+    --new-hero-theme: #c4c4c4;
     --primary-theme-light: #eeeeee;
     --accent-color: #2196f3;
     --primary-white-color: #fff;
@@ -63,9 +64,6 @@ body {
 
 .logo {
     margin-right: 93px;
-}
-
-.logo {
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
@@ -89,14 +87,28 @@ body {
     font-weight: 500;
     color: var(--basic-color);
 }
+.current {
+    color: var(--accent-color);
+}
+
+.current {
+    color: var(--accent-color);
+}
 
 .menu-link:hover,
 .menu-link:focus {
     color: var(--accent-color);
 }
 
-.current {
-    color: var(--accent-color);
+.menu-link.current::after {
+    position: absolute;
+    margin-top: 28px;
+    display: block;
+    content: '';
+    width: 48px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
 }
 
 .menu-link-contact {
@@ -107,6 +119,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.menu-link-contact:hover,
+.menu-link-contact:focus {
+    color: var(--accent-color);
 }
 
 .portfolio-menu-link-contact {
@@ -121,11 +138,6 @@ body {
 
 .port-contact-icon {
     margin-right: 10px;
-}
-
-.menu-link-contact:hover,
-.menu-link-contact:focus {
-    color: var(--accent-color);
 }
 
 .contact-icon {
@@ -152,7 +164,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-color: var(--primary-theme-dark);
+    background-color: var(--new-hero-theme);
 }
 
 .hero-title {
